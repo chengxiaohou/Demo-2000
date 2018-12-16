@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ReportVC.h"
 
 @interface ViewController ()
 
@@ -16,8 +17,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [self push:nil];
 }
 
+- (IBAction)push:(id)sender {
+    
+    [self.navigationController pushViewController:[ReportVC new] animated:0];
+}
 
 @end
